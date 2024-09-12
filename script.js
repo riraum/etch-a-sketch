@@ -2,13 +2,14 @@ console.log("Initialize");
 // Create 16x16 grid squares inside div
 // div with id="container" exists
 const container = document.querySelector("#container");
-const divSquares = document.querySelectorAll("div-squares");
+const divSquares = document.querySelectorAll("div");
 // const gridSquares = document.createElement("div-squares");
 
 function createGrid(gridAmount) {
   for (i = 0; i < gridAmount; i++) {
-    let gridSquares = document.createElement("div-squares");
+    let gridSquares = document.createElement("div");
     container.appendChild(gridSquares);
+    gridSquares.classList.add("squares");
   }
 }
 createGrid(256);
@@ -17,8 +18,9 @@ function createUserGrid(gridAmount) {
   // container.removeChild(container.divSquares);
   container.replaceChildren();
   for (i = 0; i < gridAmount; i++) {
-    let gridSquares = document.createElement("div-squares");
+    let gridSquares = document.createElement("div");
     container.appendChild(gridSquares);
+    gridSquares.classList.add("squares");
     console.log(`gridAmount is: ${gridAmount}`);
   }
 }
