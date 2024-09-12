@@ -1,14 +1,13 @@
 #container {
   display: flex;
-  flex: 1;
+  /* flex: 1 1 0; */
   flex-wrap: wrap;
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 880px;
+  max-height: 880px;
 }
 
 div {
-  margin: 4px;
-  min-width: 100px;
-  min-height: 100px;
-  flex: 1;
+  border: 1px solid black;
+  min-width: 50px;
+  min-height: 50px;
 }
