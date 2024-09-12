@@ -12,6 +12,6 @@ div-squares {
   background-color: red;
 }
 
-div:hover {
+div-squares:hover {
   background-color: rgba(212, 13, 83, 0.426);
 }
