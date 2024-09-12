@@ -7,5 +7,9 @@ for (let i = 0; i < 256; i++) {
   divSelect.appendChild(gridSquares);
   // gridSquares.style.width = "20px";
   // gridSquares.style.height = "20px";
-  gridSquares.style.background = "red";
+  // gridSquares.style.background = "red";
 }
+// Add eventlistener for hover
+// divSelect.addEventListener("hover", (e) => {
+//   console.log("hello");
+// });
