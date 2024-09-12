@@ -1,0 +1,9 @@
+div {
+  display: flex;
+  margin: 4px;
+  min-width: 100px;
+  min-height: 100px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
