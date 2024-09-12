@@ -1,9 +1,14 @@
-div {
+#container {
   display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 800px;
+  max-height: 800px;
+}
+
+div {
   margin: 4px;
   min-width: 100px;
   min-height: 100px;
   flex: 1;
-  flex-wrap: wrap;
 }
-
