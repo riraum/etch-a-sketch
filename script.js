@@ -3,7 +3,7 @@ console.log("Initialize");
 // div with id="container" exists
 const divSelect = document.querySelector("#container");
 for (let i = 0; i < 256; i++) {
-  let gridSquares = document.createElement("div");
+  let gridSquares = document.createElement("div-squares");
   divSelect.appendChild(gridSquares);
   // gridSquares.style.width = "20px";
   // gridSquares.style.height = "20px";
