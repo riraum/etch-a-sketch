@@ -13,3 +13,6 @@ for (let i = 0; i < 256; i++) {
 // divSelect.addEventListener("hover", (e) => {
 //   console.log("hello");
 // });
+function requestGridSize() {
+  let newGridSize = prompt("Enter grid size <=100");
+}
