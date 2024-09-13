@@ -5,24 +5,24 @@ const container = document.querySelector("#container");
 const divSquares = document.querySelectorAll("div");
 // const gridSquares = document.createElement("div-squares");
 
-function createGrid(gridAmount) {
+function createGridSquares(gridAmount) {
   for (i = 0; i < gridAmount; i++) {
     let gridSquares = document.createElement("div");
-    container.appendChild(gridSquares);
     gridSquares.classList.add("squares");
+    container.appendChild(gridSquares);
+    console.log(`gridAmount is: ${gridAmount}`);
   }
+}
+
+function createGrid(gridAmount) {
+  createGridSquares(gridAmount);
 }
 createGrid(256);
 
 function createUserGrid(gridAmount) {
   // container.removeChild(container.divSquares);
   container.replaceChildren();
-  for (i = 0; i < gridAmount; i++) {
-    let gridSquares = document.createElement("div");
-    container.appendChild(gridSquares);
-    gridSquares.classList.add("squares");
-    console.log(`gridAmount is: ${gridAmount}`);
-  }
+  createGridSquares(gridAmount);
 }
 // Add eventlistener for hover
 // divSelect.addEventListener("hover", (e) => {
