@@ -6,7 +6,7 @@ const divSquares = document.querySelectorAll("div");
 // const gridSquares = document.createElement("div-squares");
 
 function createGridSquares(gridAmount) {
-  for (i = 0; i < gridAmount; i++) {
+  for (i = 1; i < gridAmount; i++) {
     let gridSquares = document.createElement("div");
     gridSquares.classList.add("squares");
     container.appendChild(gridSquares);
@@ -17,7 +17,7 @@ function createGridSquares(gridAmount) {
 function createGrid(gridAmount) {
   createGridSquares(gridAmount);
 }
-createGrid(256);
+createGrid(273);
 
 function createUserGrid(gridAmount) {
   // container.removeChild(container.divSquares);
