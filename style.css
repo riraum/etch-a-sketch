@@ -1,29 +1,37 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
   #container {
   display: flex;
-  /* flex: 1 1 0px; */
-  flex-wrap: wrap;
-  width: 900px;
-  /* height: 800px; */
-  justify-content: center;
+  flex-direction: column;
+  /* flex: 1; */
+  /* flex-wrap: wrap; */
+  width: 500px;
+  height: 500px;
+  /* justify-content: center; */
   /* align-items: center; */
   /* align-content: center; */
+  /* border: 1px solid red; */
 }
 
-/* div .rows {
+div.row {
+  display: flex;
+  /* border: 1px solid red; */
+  /* flex-direction: column; */
+  flex: 1;
+}
 
-} */
-
-div.squares{
+div.cell {
   /* display: flex; */
   border: 1px solid black;
-  min-width: 15px;
-  min-height: 15px;
+  /* min-width: 15px;
+  min-height: 15px; */
   background-color: rgba(214, 204, 204, 0);
   transition: background-color 1s;
-  /* flex: 1; */
+  /* border: 1px solid red; */
+  flex-direction: column;
+  flex: 1;
   /* flex-basis: 10%; */
 }
 
@@ -33,17 +41,18 @@ div.squares{
   height: 0;
 } */
 
-div.break {
+/* div.break {
   flex-basis: 100%;
   border: 0;
   height: 0;
-}
+  border: 1px solid red;
+} */
 
-div.squares:active,
-div.squares:focus {
+div.cell:active,
+div.cell:focus {
   background-color: rgba(37, 35, 36, 0.832);
 }
 
-div.squares:hover {
+div.cell:hover {
   background-color: rgb(0, 0, 0);
 }

@@ -7,20 +7,19 @@ const container = document.querySelector("#container");
 // const gridSquares = document.querySelectorAll("#container>div:nth-child");
 
 function createGridSquares(gridAmount) {
-  for (let i = 0; i < gridAmount * gridAmount; i++) {
-    let gridSquares = document.createElement("div");
-    gridSquares.classList.add("squares");
+  // row loop
+  for (let i = 0; i < gridAmount; i++) {
+    let row = document.createElement("div");
+    row.classList.add("row");
+    // cell loop
+    for (let j = 0; j < gridAmount; j++) {
+      let cell = document.createElement("div");
+      cell.classList.add("cell");
 
-    if (i % gridAmount == 0) {
-      // gridSquares.classList.add("break");
-      let breakDiv = document.createElement("div");
-      breakDiv.className = "break";
-      // container.insertBefore(breakDiv, gridSquares[i +1]);
-      container.appendChild(breakDiv);
+      row.appendChild(cell);
+      console.log(`gridAmount is: ${gridAmount}`);
     }
-
-    container.appendChild(gridSquares);
-    console.log(`gridAmount is: ${gridAmount}`);
+    container.appendChild(row);
   }
 }
 
