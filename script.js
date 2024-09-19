@@ -1,10 +1,6 @@
 console.log("Initialize");
-// Create 16x16 grid squares inside div
-// div with id="container" exists
+
 const container = document.querySelector("#container");
-// const divSquares = document.querySelectorAll(".squares");
-// const rows = document.querySelectorAll(".rows");
-// const gridSquares = document.querySelectorAll("#container>div:nth-child");
 
 function createGridSquares(gridAmount) {
   // row loop
@@ -17,7 +13,6 @@ function createGridSquares(gridAmount) {
       cell.classList.add("cell");
 
       row.appendChild(cell);
-      console.log(`gridAmount is: ${gridAmount}`);
     }
     container.appendChild(row);
   }

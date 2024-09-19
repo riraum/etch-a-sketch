@@ -5,48 +5,21 @@
   #container {
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
-  /* flex-wrap: wrap; */
   width: 500px;
   height: 500px;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* align-content: center; */
-  /* border: 1px solid red; */
 }
 
 div.row {
   display: flex;
-  /* border: 1px solid red; */
-  /* flex-direction: column; */
   flex: 1;
 }
 
 div.cell {
-  /* display: flex; */
   border: 1px solid black;
-  /* min-width: 15px;
-  min-height: 15px; */
   background-color: rgba(214, 204, 204, 0);
   transition: background-color 1s;
-  /* border: 1px solid red; */
-  flex-direction: column;
   flex: 1;
-  /* flex-basis: 10%; */
 }
-
-/* #container>div:nth-child(17n +1) {
-  width: 100%; 
-  border: 0;
-  height: 0;
-} */
-
-/* div.break {
-  flex-basis: 100%;
-  border: 0;
-  height: 0;
-  border: 1px solid red;
-} */
 
 div.cell:active,
 div.cell:focus {
