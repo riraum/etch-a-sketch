@@ -14,6 +14,8 @@ function createGridSquares(gridAmount) {
 
     if (i % gridAmount == 0) {
       gridSquares.classList.add("break");
+      // breakDiv.className = "break";
+      // container.insertBefore(breakDiv, gridSquares[i +1]);
     }
 
     container.appendChild(gridSquares);
