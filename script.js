@@ -4,7 +4,6 @@ console.log("Initialize");
 const container = document.querySelector("#container");
 // const divSquares = document.querySelectorAll(".squares");
 // const rows = document.querySelectorAll(".rows");
-// const breakDiv = document.createElement(".break");
 // const gridSquares = document.querySelectorAll("#container>div:nth-child");
 
 function createGridSquares(gridAmount) {
@@ -13,9 +12,11 @@ function createGridSquares(gridAmount) {
     gridSquares.classList.add("squares");
 
     if (i % gridAmount == 0) {
-      gridSquares.classList.add("break");
-      // breakDiv.className = "break";
+      // gridSquares.classList.add("break");
+      let breakDiv = document.createElement("div");
+      breakDiv.className = "break";
       // container.insertBefore(breakDiv, gridSquares[i +1]);
+      container.appendChild(breakDiv);
     }
 
     container.appendChild(gridSquares);
@@ -23,34 +24,8 @@ function createGridSquares(gridAmount) {
   }
 }
 
-// function createGrid(gridAmount) {
-//   createGridSquares(gridAmount);
-//   // let breakDiv = document.createElement("div");
-//   // breakDiv.className = "break";
-//   // container.appendChild(breakDiv);
-// }
 createGridSquares(16);
 
-// function createUserGrid(gridAmount) {
-//   // container.removeChild(container.divSquares);
-//   container.replaceChildren();
-//   createGridSquares(gridAmount);
-//   breakLogic(gridAmount);
-// }
-
-// break logic
-// function breakLogic(gridAmount) {
-//   for (i = 1; i < gridAmount; i++) {
-//     let gridSquares = document.createElement("div");
-//     gridSquares.classList.add("break");
-//     container.appendChild(gridSquares);
-//   }
-// }
-
-// Add eventlistener for hover
-// divSelect.addEventListener("hover", (e) => {
-//   console.log("hello");
-// });
 function requestGridSize() {
   let newGridSize = prompt("Enter grid size <=100");
   container.replaceChildren();
