@@ -3,6 +3,7 @@ console.log("Initialize");
 // div with id="container" exists
 const container = document.querySelector("#container");
 const divSquares = document.querySelectorAll(".squares");
+const rows = document.querySelectorAll(".rows");
 // const breakDiv = document.createElement(".break");
 // const gridSquares = document.querySelectorAll("#container>div:nth-child");
 
@@ -17,9 +18,9 @@ function createGridSquares(gridAmount) {
 
 function createGrid(gridAmount) {
   createGridSquares(gridAmount);
-  let breakDiv = document.createElement("div");
-  breakDiv.className = "break";
-  container.appendChild(breakDiv);
+  // let breakDiv = document.createElement("div");
+  // breakDiv.className = "break";
+  // container.appendChild(breakDiv);
 }
 createGrid(273);
 
@@ -27,7 +28,18 @@ function createUserGrid(gridAmount) {
   // container.removeChild(container.divSquares);
   container.replaceChildren();
   createGridSquares(gridAmount);
+  breakLogic(gridAmount);
 }
+
+// break logic
+function breakLogic(gridAmount) {
+  for (i = 1; i < gridAmount; i++) {
+    let gridSquares = document.createElement("div");
+    gridSquares.classList.add("break");
+    container.appendChild(gridSquares);
+  }
+}
+
 // Add eventlistener for hover
 // divSelect.addEventListener("hover", (e) => {
 //   console.log("hello");
