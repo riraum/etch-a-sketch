@@ -12,6 +12,10 @@
   align-content: center;
 }
 
+/* .rows {
+
+} */
+
 div .squares{
   /* display: flex; */
   border: 1px solid black;
@@ -24,6 +28,12 @@ div .squares{
 }
 
 #container>div:nth-child(17n +1) {
+  width: 100%; /* or flex-basis: 100% */
+  border: 0;
+  height: 0;
+}
+
+.break {
   width: 100%;
   border: 0;
   height: 0;

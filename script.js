@@ -2,8 +2,9 @@ console.log("Initialize");
 // Create 16x16 grid squares inside div
 // div with id="container" exists
 const container = document.querySelector("#container");
-const divSquares = document.querySelectorAll("div");
-// const gridSquares = document.createElement("div-squares");
+const divSquares = document.querySelectorAll(".squares");
+// const breakDiv = document.createElement(".break");
+// const gridSquares = document.querySelectorAll("#container>div:nth-child");
 
 function createGridSquares(gridAmount) {
   for (i = 1; i < gridAmount; i++) {
@@ -16,6 +17,9 @@ function createGridSquares(gridAmount) {
 
 function createGrid(gridAmount) {
   createGridSquares(gridAmount);
+  let breakDiv = document.createElement("div");
+  breakDiv.className = "break";
+  container.appendChild(breakDiv);
 }
 createGrid(273);
 
