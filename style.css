@@ -27,13 +27,13 @@ div .squares{
   /* flex-basis: 10.6%; */
 }
 
-#container>div:nth-child(17n +1) {
+/* #container>div:nth-child(17n +1) {
   width: 100%; 
   border: 0;
   height: 0;
-}
+} */
 
-.break {
+div .break {
   width: 100%;
   border: 0;
   height: 0;
