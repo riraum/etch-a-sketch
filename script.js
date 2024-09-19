@@ -1,35 +1,28 @@
 console.log("Initialize");
-// Create 16x16 grid squares inside div
-// div with id="container" exists
+
 const container = document.querySelector("#container");
-const divSquares = document.querySelectorAll("div");
-// const gridSquares = document.createElement("div-squares");
 
 function createGridSquares(gridAmount) {
-  for (i = 0; i < gridAmount; i++) {
-    let gridSquares = document.createElement("div");
-    gridSquares.classList.add("squares");
-    container.appendChild(gridSquares);
-    console.log(`gridAmount is: ${gridAmount}`);
+  // row loop
+  for (let i = 0; i < gridAmount; i++) {
+    let row = document.createElement("div");
+    row.classList.add("row");
+    // cell loop
+    for (let j = 0; j < gridAmount; j++) {
+      let cell = document.createElement("div");
+      cell.classList.add("cell");
+
+      row.appendChild(cell);
+    }
+    container.appendChild(row);
   }
 }
 
-function createGrid(gridAmount) {
-  createGridSquares(gridAmount);
-}
-createGrid(256);
+createGridSquares(16);
 
-function createUserGrid(gridAmount) {
-  // container.removeChild(container.divSquares);
-  container.replaceChildren();
-  createGridSquares(gridAmount);
-}
-// Add eventlistener for hover
-// divSelect.addEventListener("hover", (e) => {
-//   console.log("hello");
-// });
 function requestGridSize() {
   let newGridSize = prompt("Enter grid size <=100");
-  createUserGrid(newGridSize * newGridSize);
+  container.replaceChildren();
+  createGridSquares(newGridSize);
   console.log(`newGridSize is: ${newGridSize}`);
 }
