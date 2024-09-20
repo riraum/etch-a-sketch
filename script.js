@@ -1,14 +1,12 @@
-console.log("Initialize");
+console.log("안녕!");
 
 const container = document.querySelector("#container");
 
-function createGridSquares(gridAmount) {
-  // row loop
-  for (let i = 0; i < gridAmount; i++) {
+function createGrid(size) {
+  for (let i = 0; i < size; i++) {
     let row = document.createElement("div");
     row.classList.add("row");
-    // cell loop
-    for (let j = 0; j < gridAmount; j++) {
+    for (let y = 0; y < size; y++) {
       let cell = document.createElement("div");
       cell.classList.add("cell");
 
@@ -18,11 +16,10 @@ function createGridSquares(gridAmount) {
   }
 }
 
-createGridSquares(16);
+createGrid(16);
 
 function requestGridSize() {
-  let newGridSize = prompt("Enter grid size <=100");
+  let userSize = prompt("Enter grid size <100");
   container.replaceChildren();
-  createGridSquares(newGridSize);
-  console.log(`newGridSize is: ${newGridSize}`);
+  createGrid(userSize);
 }
