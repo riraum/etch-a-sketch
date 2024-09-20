@@ -16,3 +16,9 @@ function createGrid(size) {
   }
 }
 createGrid(16);
+
+function requestGridSize() {
+  let userSize = prompt("Input size <=100");
+  container.replaceChildren();
+  createGrid(userSize);
+}
